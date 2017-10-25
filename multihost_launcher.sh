@@ -62,11 +62,8 @@ do
    	esac
 done
 
-echo "Generating the Artifacts"
-./generateArtifacts.sh $channel
-
-echo "Copying and untaring the files on all the machines"
-./copy.sh && ./untar.sh
+#echo "Generating the Artifacts"
+#./generateArtifacts.sh $channel
 
 echo "Creating the overlay network"
 docker network ls | grep my-network
