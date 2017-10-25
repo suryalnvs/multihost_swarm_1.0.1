@@ -33,7 +33,13 @@ Obtain the hostnames of your manager, workers by running the command:
 ```
 docker node ls
 ```
-To launch the network across multiple machines, modify the following in the multihost_launcher.sh script with the hostnames obtained from above:
+Before launching the network, generate the certificates using cryptogen and channel-artifacts using configtxgen:
+```
+/generateArtifacts.sh <channel-name>
+```
+Once, the above command ran successfully, copy the generated certificates and channel-artifacts to alocation on all the machines in the cluster.
+
+## To launch the network across multiple machines, modify the following in the multihost_launcher.sh script with the hostnames obtained from above:
 ```
 ZK_NODE="manager" # Node name of the host where zookeeper will be launched
 KAFKA_NODE="manager" #Node name of the host where kafka will be launched
@@ -43,7 +49,7 @@ PEER_NODE2="multihost2" #Node name of the host where the second peer of each org
 CA_NODE="manager"  #Node name of the host where the ca of each organization will be launched
 CLI_NODE="manager" #Node name of the host where the cli container will be launched
 TLS=true
-CERTS_PATH=/home/ubuntu/multihost_swarm_1.0.1 #change this path to where the multihost_swarm_1.0.1 is cloned
+CERTS_PATH=/home/ubuntu/multihost_swarm_1.0.1 #change this path to where the certificates and channel-artifacts are copied
 ```
 After modifying the multihost_launcher.sh script, use the following script to launch the network:
 ```
