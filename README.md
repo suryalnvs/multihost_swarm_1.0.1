@@ -35,7 +35,7 @@ docker node ls
 ```
 Before launching the network, generate the certificates using cryptogen and channel-artifacts using configtxgen:
 ```
-/generateArtifacts.sh <channel-name>
+./generateArtifacts.sh <channel-name>
 ```
 Once, the above command ran successfully, copy the generated certificates and channel-artifacts to alocation on all the machines in the cluster.
 
