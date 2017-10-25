@@ -25,7 +25,10 @@ docker swarm join --token SWMTKN-1-1rzeleqmbxe1czsan98fopg63ghyp9sqc1lvj8z94bvht
 Execute this statement on both worker machines(which now are workers from a swarm perspective but we just need them for the overlay network so we do not care). 
 
 ## Launching the Hyperledger-Fabric Network across multihosts:
-**clone the repo onto the first machine (swarm-manager) and start launching the network across multihost machines from multihost_swarm_1.0.1 directory. Let's go!*
+*Clone this repo onto the first machine (swarm-manager) and start launching the network across multihost machines from multihost_swarm_1.0.1 directory. Let's go!*
+```
+git clone https://github.com/suryalnvs/multihost_swarm_1.0.1.git
+```
 ```
 cd multihost_swarm_1.0.1
 ```
