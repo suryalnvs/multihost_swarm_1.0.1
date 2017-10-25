@@ -37,7 +37,7 @@ Before launching the network, generate the certificates using cryptogen and chan
 ```
 ./generateArtifacts.sh <channel-name>
 ```
-Once, the above command ran successfully, copy the generated certificates and channel-artifacts to alocation on all the machines in the cluster.
+Once, the above command ran successfully, copy the generated certificates and channel-artifacts to a location on all the machines in the cluster.
 
 ## To launch the network across multiple machines, modify the following in the multihost_launcher.sh script with the hostnames obtained from above:
 ```
